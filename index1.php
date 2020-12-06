@@ -6,22 +6,41 @@
 <script src="js/jquery-1.10.2.js"></script>
 <script src="js/jquery-ui.js"></script>
 
+<style type="text/css">
+body {
+	width:800px;
+	margin:auto;
+}
  
+#date_Format_Style {
+	padding: 20px 40px;
+	background: #0079B3;
+	border:2px solid #222;
+	color: #FFF;
+	font-size: 1.2em;
+	margin-top:100px;
+	text-align:center;
+}
+
+.input-style {
+	margin-bottom: 20px;
+}
+
+.form-input-style {
+	padding: 10px;
+	width: 250px;
+	border:1px solid blue;
+	font-size: 18px;
+	border-radius:8px;
+}
+</style>
   
   <script>
   $(document).ready(function() {
-    $( "#date_picker" ).datepicker(
-	{
-	changeMonth: true, 
-    changeYear: true, 
-	dateFormat: "yy-mm-dd",
-    yearRange: "-90:+00"
-	}
-	);
-	
+    $( "#date_picker" ).datepicker();
   });
   function change_DateFormat(date_format) {
-	  $( "#date_picker" ).datepicker( "option", "dateFormat", "yy-mm-dd" );
+	  $( "#date_picker" ).datepicker( "option", "dateFormat", date_format );
   }
   </script>
   
